@@ -58,6 +58,7 @@ function App() {
     dispatch({type: ACTION.REPEAT_TEXT})
     setTimer(settings.type == 'time' ? settings.extra : 60)
     setTextTyped('')
+    document.querySelector('.text-div').scrollTo(0, 0)
   }
 
   // Show Status :

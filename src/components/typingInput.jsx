@@ -10,6 +10,7 @@ export default function TypingInput({settings, setTextTyped, textTyped, state, t
         refInput.current = 0
         missedtyped.current = 0
         setTextTyped('')
+        
     },[settings, state.text])
 
     function handleTyping(e){
@@ -68,7 +69,7 @@ export default function TypingInput({settings, setTextTyped, textTyped, state, t
                 {(loading && settings.type == 'quotes') && <div className='loading absolute flex justify-center items-center w-full h-40 z-40 bg-[#323437e0]'>
                     Loading...
                 </div>}
-                <div onClick={() => document.querySelector('textarea').focus()} className='text-div -z-0 h-40 absolute w-full text-4xl font-medium leading-normal bg-transparent  borde outline-none'>
+                <div onClick={() => document.querySelector('textarea').focus()} className='text-div -z-0 h-40 text-center absolute w-full text-4xl font-medium leading-normal bg-transparent  borde outline-none'>
                     {
                         state.text.split('').map((e, index) => {
                             return(
