@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #323437;
+  --main-color: #14e2b2;
+  --caret-color: #14e2b2;
+  /* --main-color: #e2b714;
+  --caret-color: #e2b714; */
+  --sub-color: #646669;
+  --sub-alt-color: #2c2e31;
+  --text-color: #d1d0c5;
+  --error-color: #ca4754;
+  --error-extra-color: #7e2a33;
+  --colorful-error-color: #ca4754;
+  --colorful-error-extra-color: #7e2a33;
+}
+/* html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  line-height: 1.25;
+} */
+
+body{
+  background-color: var(--bg-color);
+  color: white;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: "Roboto Mono", "Vazirmatn", monospace;
+}
+
+.app > textarea, .app .text-div{
+  letter-spacing: 2px;
+  /* -ms-overflow-style: none; */
+  overflow-y: hidden;
+  /* caret-color : var(--caret-color); */
+  /* caret-shape: underscore; */
+  
+}
+
+/* .app > textarea {
+  caret-color: transparent; // Hide the default caret
+  position: relative;
+}
+.app > textarea::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 1em;
+  background: blue;
+  animation: blink 3s step-end infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+} */
+
+.active-caret{
+  /* position: relative; */
+  border-left: 3px solid var(--caret-color);
+  animation: blink 1s ease infinite;
+
+}
+
+@keyframes blink {
+  50% {
+    /* opacity: 0; */
+    border-color: transparent;
+
+  }
+}
