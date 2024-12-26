@@ -33,6 +33,7 @@ body{
   letter-spacing: 2px;
   /* -ms-overflow-style: none; */
   overflow-y: hidden;
+  scrollbar-width: none;
   /* caret-color : var(--caret-color); */
   /* caret-shape: underscore; */
   
@@ -69,4 +70,9 @@ body{
     border-color: transparent;
 
   }
+}
+
+
+textarea{
+  scrollbar-width: none;
 }
